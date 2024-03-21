@@ -57,7 +57,7 @@ class EventResource extends Resource
                 ->placeholder('اختر اسماءالمتطوعين')
                 ->searchable(['name', 'phone'])
                 ->preload()
-                ->required(),
+                ->required()->columnSpan(2),
                 Select::make('type')
                 ->options([
                     '1 معرض' => '1 معرض',
@@ -72,14 +72,14 @@ class EventResource extends Resource
                     'اخر'    => 'اخر',
                 ])->label('نوع المشاركة')
                 ->placeholder('اختر النوع')
-                ->required(),
+                ->required()->columnSpan(2),
                 Textarea::make('note')
-                ->label('الملاحظات'),
+                ->label('الملاحظات')->columnSpan(2),
                 SpatieMediaLibraryFileUpload::make('vol_scren')
                 ->collection('screns')
                 ->multiple()
                 ->downloadable()
-                ->label('صورة الحدث'),
+                ->label('صورة الحدث')->columnSpan(2),
                 Checkbox::make('tshirt')
                 ->label('تيشرت رسالة')->columnSpan(2),
                 Checkbox::make('food')
