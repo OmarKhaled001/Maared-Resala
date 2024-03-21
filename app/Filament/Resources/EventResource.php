@@ -39,7 +39,6 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-
                 Select::make('volunteer_id')
                 ->createOptionForm([
                     TextInput::make('name')
@@ -81,9 +80,12 @@ class EventResource extends Resource
                 ->multiple()
                 ->downloadable()
                 ->label('صورة الحدث'),
-                TextInput::make('tshirt')
-                ->numeric()
+                Checkbox::make('tshirt')
                 ->label('تيشرت رسالة'),
+                Checkbox::make('food')
+                ->label('وجبة'),
+                Checkbox::make('new')
+                ->label('جديد'),
             ]);
     }
 
