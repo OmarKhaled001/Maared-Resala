@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('volunteer_id')->nullable()->references('id')->on('volunteers')->onDelete('set null');
             $table->date('date');
             $table->string('type');
             $table->boolean('tshirt')->nullable();
+            $table->boolean('food')->nullable();
+            $table->boolean('new')->nullable();
             $table->string('note')->nullable();
             $table->timestamps();
         });

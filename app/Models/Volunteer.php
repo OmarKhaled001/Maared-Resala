@@ -13,9 +13,8 @@ class Volunteer extends Model implements HasMedia
     use HasFactory,InteractsWithMedia;
     protected $guarded = [];
 
-    public function events( ){ 
-
-        return $this->belongsToMany(Event::class ,'event_volunteer')->withTimestamps(); 
+    public function event( ){ 
+        return $this->belongsTo(Event::class); 
     }
 
     protected $appends = ['age'];

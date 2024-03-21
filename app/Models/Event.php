@@ -17,7 +17,7 @@ class Event extends Model implements HasMedia
 
     public function volunteers()
     { 
-        return $this->belongsToMany(Volunteer::class ,'event_volunteer')->withTimestamps(); 
+        return $this->hasMany(Volunteer::class ); 
     }
 
 
