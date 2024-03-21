@@ -79,14 +79,17 @@ class EventResource extends Resource
                 ->collection('screns')
                 ->multiple()
                 ->downloadable()
-                ->label('صورة الحدث')->columnSpan(2),
+                ->label('صورة الحدث')
+                ->columnSpan(2),
                 Checkbox::make('tshirt')
-                ->label('تيشرت رسالة')->columnSpan(2),
+                ->label('تيشرت رسالة')
+                ->columnSpan(2),
                 Checkbox::make('food')
                 ->label('وجبة')
                 ->columnSpan(2),
                 Checkbox::make('new')
-                ->label('جديد')->columnSpan(2),
+                ->label('جديد')
+                ->columnSpan(2),
             ]);
     }
 
