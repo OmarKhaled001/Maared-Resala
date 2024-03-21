@@ -138,10 +138,6 @@ class VolunteerResource extends Resource
                 ->label('العمر')
                 ->toggleable(isToggledHiddenByDefault: true)
                 ->sortable(),
-                TextColumn::make('event_count')
-                ->counts('event')
-                ->label('العدد')
-                ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('event.date')
                 ->label('المشاركات الاخيرة')
                 ->toggleable(isToggledHiddenByDefault: true)
