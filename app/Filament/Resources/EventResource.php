@@ -107,12 +107,6 @@ class EventResource extends Resource
                 ->listWithLineBreaks()
                 ->limitList(3)
                 ->expandableLimitedList(),
-                TextColumn::make('type')
-                ->label('المشاركة')
-                ->searchable(),
-                TextColumn::make('volunteers_count')
-                ->counts('volunteers')
-                ->label('العدد'),
                 SpatieMediaLibraryImageColumn::make('vol_scren')
                 ->collection('screns')
                 ->label('صورة الحدث')
