@@ -55,12 +55,10 @@ class EventResource extends Resource
                     ->label('تاريخ التطوع'),
                 ])
                 ->relationship('volunteers','name')
-                ->label('المتطوعين')
+                ->label('أسم المتطوع')
                 ->placeholder('اختر اسماءالمتطوعين')
                 ->searchable(['name', 'phone'])
-                ->multiple()
                 ->preload()
-                ->maxItems(10)
                 ->required(),
                 Select::make('type')
                 ->options([
