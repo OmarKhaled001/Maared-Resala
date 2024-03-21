@@ -39,8 +39,7 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-                DatePicker::make('date')
-                ->label('التاريخ'),
+
                 Select::make('volunteer_id')
                 ->createOptionForm([
                     TextInput::make('name')
@@ -92,9 +91,6 @@ class EventResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('date')
-                ->label('التاريخ')
-                ->date('d-m'),
                 TextColumn::make('volunteers.name')
                 ->label('الاسم')
                 ->toggleable(isToggledHiddenByDefault: true)
