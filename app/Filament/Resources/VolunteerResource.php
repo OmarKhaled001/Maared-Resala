@@ -138,13 +138,7 @@ class VolunteerResource extends Resource
                 ->label('العمر')
                 ->toggleable(isToggledHiddenByDefault: true)
                 ->sortable(),
-                TextColumn::make('event.date')
-                ->label('المشاركات الاخيرة')
-                ->toggleable(isToggledHiddenByDefault: true)
-                ->listWithLineBreaks()
-                ->limitList(3)
-                ->copyable()
-                ->expandableLimitedList(),
+
             ])
             ->filters([
                 SelectFilter::make('status')
