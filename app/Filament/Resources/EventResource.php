@@ -86,7 +86,7 @@ class EventResource extends Resource
                 ->label('وجبة'),
                 Checkbox::make('new')
                 ->label('جديد'),
-            ]);
+            ])->columnSpan(3);
     }
 
     public static function table(Table $table): Table
