@@ -81,12 +81,13 @@ class EventResource extends Resource
                 ->downloadable()
                 ->label('صورة الحدث'),
                 Checkbox::make('tshirt')
-                ->label('تيشرت رسالة'),
+                ->label('تيشرت رسالة')->columnSpan(2),
                 Checkbox::make('food')
-                ->label('وجبة'),
+                ->label('وجبة')
+                ->columnSpan(2),
                 Checkbox::make('new')
-                ->label('جديد'),
-            ])->columnSpan(3);
+                ->label('جديد')->columnSpan(2),
+            ]);
     }
 
     public static function table(Table $table): Table
